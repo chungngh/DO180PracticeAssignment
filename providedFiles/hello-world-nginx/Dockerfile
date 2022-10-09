@@ -4,7 +4,7 @@ RUN yum install -y --disableplugin=subscription-manager --nodocs nginx \
   && yum clean all \
   && echo ${WHICHINDEX} > /usr/share/nginx/html/index.html
 
-#ADD index.html /usr/share/nginx/html
+ADD index.html /usr/share/nginx/html
 
 
 ADD nginxconf.sed /tmp/
